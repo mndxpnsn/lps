@@ -108,8 +108,11 @@ void lps(std::string& s) {
                 cond3 = s[left_track] == s[right_track];
             }
         }
+
+        //Advance seed index
         index++;
 
+        //Break from loop if longest palindrome substring is already found
         int diff = size_string - index;
         bool cond = (size_palindrome / 2) > (diff + 10);
         if(cond) { index = size_string; }
@@ -119,7 +122,7 @@ void lps(std::string& s) {
 }
 
 int main() {
-	//Get string input from STDIN
+    //Get string input from STDIN
     string s;
     cin >> s;
 
